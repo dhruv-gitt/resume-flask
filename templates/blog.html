@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+
+<section class="dark">
+	<div class="container py-4">
+		<a class="btn btn-primary" href="/dashboard" role="button">Login</a>
+		<h1 class="h1 text-center" id="pageHeaderTitle" style="color: aliceblue;">Blogs</h1>
+		{% for blog in posts %}
+		{% set fname = 'assets/img/' + blog.img %}
+		{% set fname2 = 'assets/img/' + blog.img2 %}
+		<article class="postcard dark green">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{{ url_for('static', filename = fname ) }}" alt="Image Title" />
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title green"><a href="/blog2/{{blog.slug}}">{{blog.tittle}}</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>{{blog.Date}}
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">{{blog.content[0:180]}}. . . . . . . . . . . . . . . . .</div>
+			</div>
+		</article>
+
+		<article class="postcard dark red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{{ url_for('static', filename = fname2 ) }}" alt="Image Title" />	
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title red"><a href="/blog3/{{blog.slug2}}">{{blog.tittle2}}</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>{{blog.Date2}}
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">{{blog.content2[0:180]}}. . . . . . . . . . . . . . . . .</div>
+			</div>
+		</article>
+		
+		{% endfor %}
+	
+		<nav aria-label="Page navigation">
+			
+			  <li class="pagination justify-content-left">
+				<a class="page-link" href="{{prev}}" >Previous</a>
+			  </li>
+			  
+			  <li class="pagination justify-content-end">
+				<a class="page-link" href="{{next}}">Next</a>
+			  </li>
+			
+		  </nav>
+	
+	</div>
+</section>
+
+
+
+{% endblock %}

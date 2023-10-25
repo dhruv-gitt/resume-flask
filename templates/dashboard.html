@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block body %}
+<table class="table">
+    <h2 style="text-align:center;"><-------  Welcome to Admin Panel  -------></h2>
+    <hr>
+    <a class="btn btn-primary" style="float: right;" role="button" href="/logout">Logout</a></td>
+    <a class="btn btn-primary" role="button" href="/edit/0">Add Blog</a></td>
+    <hr>
+
+    <form action="/uploader" method="post" enctype="multipart/form-data">
+      <input type="file" name="file1">
+      <button class="btn btn-primary" type="submit">Upload</button>
+    </form>
+  
+    <hr>
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">Title</th>
+        <th scope="col">Date</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for blog in posts %}
+    
+        <tr>
+        <td>{{blog.sno}}</td>
+        <td>{{blog.tittle}}</td>
+        <td>{{blog.Date}}</td>
+        <td><a class="btn btn-primary" role="button" href="/edit/{{blog.sno}}">Edit</a></td>
+        <td><a class="btn btn-primary" role="button" href="/delete/{{blog.sno}}">Delete</a></td>
+      </tr>
+      <tr>
+        <td>{{blog.sno2}}</td>
+        <td>{{blog.tittle2}}</td>
+        <td>{{blog.Date2}}</td>
+        <td><a class="btn btn-primary" role="button" href="/edit/{{blog.sno}}">Edit</a></td>
+        <td><a class="btn btn-primary" role="button" href="/delete/{{blog.sno}}">Delete</a></td>
+      </tr>
+      
+    {% endfor %}
+    </tbody>  
+    
+  </table>
+  {% endblock %}

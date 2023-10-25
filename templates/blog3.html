@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <!-- Page Header -->
+    {% set fname = 'assets/img/' + blog.img2 %}
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename=fname) }}')">
+        <div class="overlay"><button type="button" class="btn btn-warning" onclick="history.back()">Go Back</button></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>{{blog.tittle2}}</h1>
+              
+              <span class="meta">Posted by
+                <a href="#">Admin</a>
+                on {{blog.Date2}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>{{blog.tittle2}}</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">Admin</a>
+              on {{blog.Date2}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            {{blog.content2}}
+
+            
+          </div>
+        </div>
+      </div>
+    </article>
+
+   {% endblock %}

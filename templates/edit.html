@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<a class="btn btn-primary" style="float: right;" role="button" href="/logout">Logout</a>
+    
+<a class="btn btn-primary" role="button" href="/dashboard">Dashboard Home</a>
+<hr>
+
+<center><form action="/edit/{{sno}}" method="post">
+    
+    <div class="form-group">
+      <label for="snoo"><h5>S.no</h5></label>
+      <input type="text" name="sno" id="sno" value="{{post.sno}}" class="form-control" placeholder="S.no">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="tittle"><h5>Title</h5></label>
+      <input type="text" name="tittle" id="tittle" value="{{post.tittle}}" class="form-control" placeholder="Title">
+    </div>
+    <hr>
+    <div class="form-group floating-label-form-group controls">
+      <label for="slug"><h5>Slug</h5></label>
+      <input type="text" name="slug" id="slug" value="{{post.slug}}" class="form-control" placeholder="Slug">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="content"><h5>Content</h5></label>
+      <textarea type="textarea" row="5" name="content"  id="content"  class="form-control" placeholder="Content" rows="3">{{post.content}}</textarea>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="content"><h5>Image-1 Filename</h5></label>
+      <input type="text" row="3" name="img" id="img" value="{{post.img}}" class="form-control" placeholder="Image-1 Filename">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="sno"><h5>S.no-2</h5></label>
+      <input type="text" name="snoo2" id="snoo2" value="{{post.sno2}}" class="form-control" placeholder="S.no-2">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="tittle2"><h5>Title-2</h5></label>
+      <input type="text" row="3" name="tittle2" id="tittle2" value="{{post.tittle2}}" class="form-control" placeholder="Title-2">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="slug2"><h5>Slug-2</h5></label>
+      <input type="text" name="slug2" id="slug2" value="{{post.slug2}}"  class="form-control" placeholder="Slug-2">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="content2"><h5>Content-2</h5></label>
+      <textarea type="textarea" name="content2" id="content2"  class="form-control" placeholder="Content-2" rows="3">{{post.content2}}</textarea>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="content"><h5>Image-2 Filename</h5></label>
+      <input type="text" row="3" name="img2" id="img2" value="{{post.img2}}" class="form-control" placeholder="Image-2 Filename">
+    </div>
+    <hr>
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+    
+
+  </form></center>
+  {% endblock %}

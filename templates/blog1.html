@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>8 Popular Platform Engineering Tools in 2023</title>
+
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-style.css')}}" />
+  </head>
+  <body>
+    {% set fname = 'assets/img/' + blog.img %}
+		{% set fname2 = 'assets/img/' + blog.img2 %}
+    <style>
+      body {
+        background-image: url('https://as1.ftcdn.net/v2/jpg/03/96/47/06/1000_F_396470601_17LypXOcRuS5UdyP5nGAgtG5F4iZF316.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+      </style>
+    <button onclick="history.back()">Go Back</button>
+    <div class="container-fluid" >
+      <div class="row tm-welcome-row">
+        <div class="col-12 tm-page-cols-container">
+          <div class="tm-page-col-left tm-welcome-box tm-bg-primary">
+            <p class="tm-welcome-text">
+              <centre>"Welcome to <br> 
+                The Blog"</centre>
+            </p>
+          </div>
+          <div class="tm-page-col-right">
+            <div
+              class="tm-welcome-parallax"
+              data-parallax="scroll"
+              data-image-src="{{ url_for('static', filename = fname ) }}"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <section class="row tm-pt-4 tm-pb-6">
+        <div class="col-12 tm-page-cols-container">
+          <div class="tm-page-col-right">
+            <h2 class="tm-text-secondary tm-mb-5">
+              {{blog.tittle}}
+            </h2>
+            <p class="tm-mb-6">
+              {{blog.content}}
+            </p>
+            <p class="mb-0">
+           	  Many of these tools may be familiar to you, such as Docker and Kubernetes. Others may be quite new, such as Backstage and Humanitec. These new tools are software specifically designed for Internal Developer Platforms (IDP) such as portals for accessing Platform Engineering offerings. All of these are applications and frameworks that platform engineers can use to automate, orchestrate, monitor, and secure the platforms they create.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="tm-page-col-right">
+        <div class="row tm-pt-7 tm-pb-6">
+          
+          <div class="col-md-6 tm-home-section-2-left"> 
+            <div class="img-fluid tm-mb-4 tm-small-parallax"
+              ><img src="{{ url_for('static', filename='img/image-1.jpg')}}"></div>
+            <div>
+              <h3 class="tm-text-secondary tm-mb-4">
+                1. Docker: To containerize your applications
+              </h3>
+              <p class="tm-mb-5">
+                Docker is a popular containerization tool that allows applications to be packaged and isolated into lightweight, portable containers. It provides a consistent environment for running applications, ensuring they work reliably across different systems. Docker simplifies the deployment process, improves scalability, and enhances resource utilization by allowing applications to run on a shared host while maintaining isolation.
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 tm-home-section-2-right">
+            <div
+              class="img-fluid tm-mb-4 tm-small-parallax"
+              ><img src="{{ url_for('static', filename='img/image-2.jpg')}}"></div>
+            <div>
+              <h3 class="tm-text-secondary tm-mb-4">
+                2. Terraform: To automate infrastructure provisioning
+              </h3>
+              <p class="tm-section-2-text">
+                Terraform is an infrastructure as code (IaC) tool that allows you to define and provision infrastructure resources in a declarative manner. It supports various cloud providers and infrastructure components, enabling you to automate the provisioning of servers, networks, storage, and other resources. Terraform provides a consistent and reproducible approach to infrastructure provisioning, making it easier to manage infrastructure changes and ensuring infrastructure consistency across different environments.
+              </p> 
+            </div>
+          </div>
+
+          <div class="col-md-6 tm-home-section-2-left"> 
+            <div class="img-fluid tm-mb-4 tm-small-parallax"
+              ><img src="{{ url_for('static', filename='img/image-3.jpg')}}"></div>
+            <div>
+              <h3 class="tm-text-secondary tm-mb-4">
+                3. Crossplane: For cloud native infrastructure management
+              </h3>
+              <p class="tm-mb-5">
+                Crossplane is an open-source project that enables cloud-native infrastructure management. It allows you to define and provision infrastructure resources and services using a unified, Kubernetes-like API. Crossplane extends the Kubernetes API to support infrastructure provisioning across multiple cloud providers and on-premises environments. It provides a consistent interface for managing infrastructure resources, making it easier to adopt a multi-cloud or hybrid cloud strategy.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 tm-home-section-2-right">
+            <div
+              class="img-fluid tm-mb-4 tm-small-parallax"
+              ><img src="{{ url_for('static', filename='img/image-4.jpg')}}"></div>
+            <div>
+              <h3 class="tm-text-secondary tm-mb-4">
+                4. GitHub: For Continuous Integration
+              </h3>
+              <p class="tm-section-2-text">
+                GitHub is a popular code hosting platform that offers various features for implementing continuous integration (CI) workflows. It provides version control, collaboration, and code review capabilities, allowing teams to work together seamlessly. GitHub integrates with CI/CD tools and services, enabling automatic building, testing, and deployment of code changes. It facilitates code quality control, collaboration, and visibility, supporting efficient and reliable software delivery.
+              </p> 
+            </div>
+          </div>
+
+          <div class="col-md-6 tm-home-section-2-left"> 
+            <div class="img-fluid tm-mb-4 tm-small-parallax"
+              ><img src="{{ url_for('static', filename='img/image-5.jpg')}}"></div>
+            <div>
+              <h3 class="tm-text-secondary tm-mb-4">
+                5. ArgoCD: For your Continuous Deployment
+              </h3>
+              <p class="tm-mb-5">
+                ArgoCD is a declarative, GitOps-based continuous deployment tool for Kubernetes applications. It allows you to define the desired state of your applications and automatically deploys and maintains them based on changes to the Git repository. ArgoCD provides automated deployment, rollbacks, and synchronization of Kubernetes resources, ensuring consistent application state across environments. It simplifies the management of complex application deployments and promotes a self-service approach for developers.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 tm-home-section-2-right">
+            <div
+              class="img-fluid tm-mb-4 tm-small-parallax"
+              ><img src="{{ url_for('static', filename='img/image-6.jpg')}}"></div>
+            <div>
+              <h3 class="tm-text-secondary tm-mb-4">
+                6. Backstage: For your IDP
+              </h3>
+              <p class="tm-section-2-text">
+                Backstage is an open-source platform for building internal developer portals or platforms. It offers a centralized, self-service catalog for developers, providing visibility into available tools, services, and resources. Backstage helps teams discover, provision, and manage software development-related services, such as APIs, libraries, documentation, and infrastructure components. It fosters collaboration, standardization, and transparency, enhancing developer productivity and streamlining the software development process within an organization.
+              </p> 
+            </div>
+          </div>
+
+          <div class="col-md-6 tm-home-section-2-left"> 
+            <div class="img-fluid tm-mb-4 tm-small-parallax"
+              ><img src="{{ url_for('static', filename='img/image-7.jpg')}}"></div>
+            <div>
+              <h3 class="tm-text-secondary tm-mb-4">
+                7. Humanitec: For your IDP (Alternative)
+              </h3>
+              <p class="tm-mb-5">
+                Humanitec is a platform designed to create and manage internal developer platforms. It focuses on empowering engineering teams to build, deploy, and manage their own applications and services. Humanitec provides a self-service catalog of reusable components, tools, and services that developers can easily discover and integrate into their projects. It streamlines the process of setting up development environments, configuring applications, and managing deployments. 
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 tm-home-section-2-right">
+            <div
+              class="img-fluid tm-mb-4 tm-small-parallax"
+              ><img src="{{ url_for('static', filename='img/image-8.jpg')}}"></div>
+            <div>
+              <h3 class="tm-text-secondary tm-mb-4">
+                8. Kubernetes: For container orchestration
+              </h3>
+              <p class="tm-section-2-text">
+                Kubernetes is a container orchestration platform that automates the deployment, scaling, and management of containerized applications. It provides a robust framework for running containerized workloads across a cluster of machines. Kubernetes handles tasks like load balancing, scaling, self-healing, and service discovery, enabling high availability and efficient resource utilization. It also offers features like rolling updates and declarative configuration, making it easier to manage complex containerized environments.
+              </p> 
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- row -->
+
+      <!-- Page footer -->
+      <footer class="row tm-page-footer">
+        
+      </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/parallax.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  </body>
+</html>

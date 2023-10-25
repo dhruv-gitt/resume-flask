@@ -1,0 +1,17 @@
+{
+    "params":
+    {
+        "local_server" : "True",
+        "local_uri" : "mysql://root:@localhost/myresume",
+        "prod_uri" : "mysql://root:@localhost/myresume",
+        "insta_url" : "https://www.instagram.com/_dhruv01",
+        "gm_username" : "testmal01111@gmail.com",
+        "gm_pass" : "nsdnnonfigwgbakq",
+        "no_of_posts": 2,
+        "admin_user": "admin",
+        "admin_password": "admin",
+        "upload_location": "C:\\Users\\lenovo\\Desktop\\python\\Flask\\static\\Uploaded_files"
+
+
+    }
+}
