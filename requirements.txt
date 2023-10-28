@@ -22,7 +22,7 @@ Flask-SQLAlchemy==3.0.5
 greenlet==3.0.0
 gunicorn==21.2.0
 idna==3.4
-ipykernel==6.25.2
+ipykernel==6.16.2
 ipython==8.15.0
 itsdangerous==2.1.2
 jedi==0.19.0
