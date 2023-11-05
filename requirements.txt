@@ -1,4 +1,5 @@
 asgiref==3.7.2
+attrbox==0.1.5
 asttokens==2.4.0
 backcall==0.2.0
 BareNecessities==0.2.8
